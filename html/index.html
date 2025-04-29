@@ -17,6 +17,70 @@
 
 	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form">
 
+		<!-- Modal de Login -->
+	
+	<!-- Modal de Login -->
+<div class="modal-form mfp-hide mfp-with-anim" id="modal-login">
+	<div class="modal-form-head" style="display: flex; align-items: center; justify-content: space-between; position: relative; padding: 10px 20px;">
+	  
+	  <!-- Logo a la izquierda -->
+	  <div class="modal-form-logo">
+		<img src="images/favicon.jpg" alt="Construction" width="60" height="60">
+	  </div>
+  
+	  <!-- Título Login centrado -->
+	  <div style="position: absolute; left: 50%; transform: translateX(-50%); font-size: 32px; font-weight: bold;">
+		Login
+	  </div>
+	</div>
+  
+	<div class="modal-form-body">
+	  <form>
+		<input type="email" placeholder="Email*" required>
+		<input type="password" placeholder="Password*" required>
+		<button class="form-button">Login</button>
+		<p style="text-align:center; margin-top: 10px;">
+		  Don't have an account? 
+		  <a href="#modal-register" data-effect="mfp-zoom-in" style="color: #2908e4;">Register</a>
+		</p>
+	  </form>
+	</div>
+  </div>
+  
+	<!-- Modal de Registro -->
+<div class="modal-form mfp-hide mfp-with-anim" id="modal-register">
+	<div class="modal-form-head" style="display: flex; align-items: center; justify-content: space-between; position: relative; padding: 10px 20px;">
+	  
+	  <!-- Logo a la izquierda -->
+	  <div class="modal-form-logo">
+		<img src="images/favicon.jpg" alt="Construction" width="60" height="60">
+	  </div>
+  
+	  <!-- Título Register centrado -->
+	  <div style="position: absolute; left: 50%; transform: translateX(-50%); font-size: 32px; font-weight: bold;">
+		Register
+	  </div>
+  
+	</div>
+  
+	<div class="modal-form-body">
+	  <form>
+		<input type="text" placeholder="Your name*" required>
+		<input type="email" placeholder="Email*" required>
+		<input type="password" placeholder="Password*" required>
+		<input type="password" placeholder="Confirm password*" required>
+		<button class="form-button">Register</button>
+		<p style="text-align:center; margin-top: 10px;">
+		  Already have an account? 
+		  <a href="#modal-login" data-effect="mfp-zoom-in" style="color: #2908e4;">Login</a>
+		</p>
+	  </form>
+	</div>
+  </div>
+  
+	
+
+
 		<div class="modal-form-head">
 			<div class="modal-form-logo">
 				<img src="images/logo-header.svg" alt="Construction">
@@ -107,6 +171,8 @@
 							<li><a class="anchor-link" href="#s-services">Nuestros servicios</a></li>
 							<li><a class="anchor-link" href="#s-gallery">Galeria</a></li>
 							<li><a class="anchor-link" href="#s-testimonials">Nuestros hoteles</a></li>
+							<li><a href="#modal-login" class="anchor-link" data-effect="mfp-zoom-in">Login</a></li>
+							<li><a href="#modal-register" class="anchor-link" data-effect="mfp-zoom-in">Register</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -122,6 +188,8 @@
 					<li><a class="anchor-link" href="#s-services">Nuestros servicios</a></li>
 					<li><a class="anchor-link" href="#s-gallery">Galeria</a></li>
 					<li><a class="anchor-link" href="#s-testimonials">Testimonials</a></li>
+					<li><a href="#modal-login" class="anchor-link" data-effect="mfp-zoom-in">Login</a></li>
+					<li><a href="#modal-register" class="anchor-link" data-effect="mfp-zoom-in">Register</a></li>
 				</ul>
 			</nav>
 
@@ -678,6 +746,17 @@
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+	$(document).ready(function() {
+		// Inicializar Magnific Popup para los modales de login y register
+		$('a[href="#modal-login"], a[href="#modal-register"]').magnificPopup({
+		  type: 'inline',
+		  fixedContentPos: false,
+		  removalDelay: 300,
+		  mainClass: 'mfp-zoom-in'
+		});
+	  });
+	  </script>
 </body>
 
 </html>
