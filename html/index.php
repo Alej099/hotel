@@ -35,15 +35,15 @@
 	</div>
   
 	<div class="modal-form-body">
-	  <form>
-		<input type="email" placeholder="Correo*" required>
-		<input type="password" placeholder="Contraseña*" required>
-		<button class="form-button">Ingresar</button>
-		<p style="text-align:center; margin-top: 10px;">
-		  No tienes cuenta? 
-		  <a href="#modal-register" data-effect="mfp-zoom-in" style="color: #2908e4;">Registrar</a>
-		</p>
-	  </form>
+	<form action="auth.php" method="POST">
+      <input type="email" name="email" placeholder="Correo*" required>
+      <input type="password" name="password" placeholder="Contraseña*" required>
+      <button class="form-button" type="submit" name="login">Ingresar</button>
+      <p style="text-align:center; margin-top: 10px;">
+        No tienes cuenta?
+        <a href="#modal-register" data-effect="mfp-zoom-in" style="color: #2908e4;">Registrar</a>
+      </p>
+    </form>
 	</div>
   </div>
   
@@ -64,17 +64,17 @@
 	</div>
   
 	<div class="modal-form-body">
-	  <form>
-		<input type="text" placeholder="Nombre*" required>
-		<input type="email" placeholder="Correo*" required>
-		<input type="password" placeholder="Contraseña*" required>
-		<input type="password" placeholder="Confirmar contraseña*" required>
-		<button class="form-button">Registrar</button>
-		<p style="text-align:center; margin-top: 10px;">
-		  Ya tienes cuenta? 
-		  <a href="#modal-login" data-effect="mfp-zoom-in" style="color: #2908e4;">Ingresar</a>
-		</p>
-	  </form>
+	<form action="auth.php" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre*" required>
+      <input type="email" name="email" placeholder="Correo*" required>
+      <input type="password" name="password" placeholder="Contraseña*" required>
+      <input type="password" name="confirmar" placeholder="Confirmar contraseña*" required>
+      <button class="form-button" type="submit" name="register">Registrar</button>
+      <p style="text-align:center; margin-top: 10px;">
+        Ya tienes cuenta?
+        <a href="#modal-login" data-effect="mfp-zoom-in" style="color: #2908e4;">Ingresar</a>
+      </p>
+    </form>
 	</div>
   </div>
   
@@ -126,7 +126,7 @@
 					</div>
 					<!-- Header top mobile END -->
 
-					<div class="header-desc">Construction work of all kinds</div>
+					<div class="header-desc">The Ocean view resort</div>
 					<div class="header-right">
 						<div class="header-info">
 							<img src="images/location.svg" alt="ул. Гагарина 5Б г. Сочи">
@@ -231,21 +231,21 @@
 					<div class="banner-content">
 						<div class="banner-subtitle wow fadeIn" data-wow-delay="0.1s">The Ocean View Resort</div>
 						<h2 class="banner-title wow fadeIn" data-wow-delay="0.2s"><strong>Estilo turístico/escapada</strong> "El lugar perfecto para tu próxima aventura"</h2>
-						<a href="#s-services" class="banner-btn def-btn anchor-link wow fadeIn" data-wow-delay="0.3s">View Services</a>
+						<a href="#modal-login" class="banner-btn def-btn anchor-link wow fadeIn" data-wow-delay="0.3s">Hacer Reservar</a>
 					</div>
 				</div>
 				<div class="swiper-slide" style="background-image: url(images/banner-bg-2.jpg)">
 					<div class="banner-content">
 						<div class="banner-subtitle wow fadeIn">The Ocean View Resort</div>
 						<h2 class="banner-title"><strong>Estilo acogedor/familiar</strong> "Cada detalle pensado para tu descanso"</h2>
-						<a href="#s-services" class="banner-btn def-btn anchor-link">View Services</a>
+						<a href="#modal-login" class="banner-btn def-btn anchor-link">Hacer Reservar</a>
 					</div>
 				</div>
 				<div class="swiper-slide" style="background-image: url(images/banner-bg-3.jpg)">
 					<div class="banner-content">
 						<div class="banner-subtitle">The Ocean View Resort</div>
 						<h2 class="banner-title"><strong>Estilo elegante/lujoso</strong> "Una experiencia cinco estrellas te espera"</h2>
-						<a href="#s-services" class="banner-btn def-btn anchor-link">View Services</a>
+						<a href="#modal-login" class="banner-btn def-btn anchor-link">Hacer Reservar</a>
 					</div>
 				</div>
 			</div>
